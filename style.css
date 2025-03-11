@@ -1,0 +1,265 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.welcome-heading {
+    font-family: cursive; 
+    font-size: 3rem; 
+    font-weight: bold; 
+    color: #2c3e50; 
+    text-align: center; 
+    padding: 1rem; 
+    background: linear-gradient(90deg, #000080, #000070); 
+    -webkit-background-clip: text; 
+    background-clip: text;
+    color: transparent; 
+    animation: fadeIn 2s ease-in-out; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    background-color: white; 
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 600px) {
+    .welcome-heading {
+        font-size: 2rem; /* Smaller font size for mobile */
+        margin: 1rem 0; /* Reduce margin for mobile */
+        padding: 0.5rem; /* Reduce padding for mobile */
+    }
+}
+Explanation of t
+
+
+
+/* Calendar Container */
+.calendar-container {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.calendar-container:hover {
+    transform: scale(1.05);
+}
+
+/* Calendar Input Styling */
+.calendar-container label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.calendar-container input {
+    padding: 12px;
+    border: 2px solid #4facfe;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    background: #f4f4f4;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.calendar-container input:focus {
+    border-color: #00f2fe;
+    box-shadow: 0 0 8px rgba(0, 242, 254, 0.5);
+}
+
+/* Task Manager Container */
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px; /* Wider container */
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* Task Input */
+.task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #4facfe;
+    box-shadow: 0 0 5px rgba(79, 172, 254, 0.5);
+}
+
+/* Button */
+button {
+    padding: 12px 15px;
+    border: none;
+    background: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #218838;
+}
+
+/* Task List */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #f8f9fa;
+    padding: 12px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+li:hover {
+    transform: scale(1.02);
+}
+
+/* Delete Button */
+.delete {
+    background: red;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.delete:hover {
+    background: darkred;
+}
+
+/* Alert Box */
+.alert-box {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.85);
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    z-index: 1000;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.alert-card {
+    background: white;
+    color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .calendar-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers child elements horizontally */
+        justify-content: center; /* Centers child elements vertically (if needed) */
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box; /* Ensures padding is included in the width */
+    }
+    
+    .calendar-container input {
+        width: 90%; /* Adjust width as needed */
+        max-width: 300px; /* Limits the maximum width */
+        font-size: 14px;
+        padding: 10px;
+        text-align: center; /* Centers text inside the input */
+        margin: 5px 0; /* Adds spacing between input fields */
+        display: block; /* Ensures inputs are block-level for better centering */
+    }
+
+    .container {
+        width: 95%;
+        padding: 15px;
+        box-sizing: border-box; /* Ensures padding is included in the width */
+    }
+
+    .task-input {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers child elements horizontally */
+    }
+
+    .task-input input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    
+}
