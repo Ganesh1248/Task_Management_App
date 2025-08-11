@@ -26,12 +26,6 @@ The **Task Management App** is a simple yet powerful **to-do list** application 
 4. Click **"Delete"** to remove a completed task.
 5. Enjoy a **smooth, interactive experience**! 🎉
 
-## 📷 Screenshots
-### 🖥️ Desktop View  
-(Attach a screenshot here)
-
-### 📱 Mobile View  
-(Attach a screenshot here)
 
 ## 📌 Upcoming Features
 🔹 **Dark mode support**  
@@ -43,7 +37,3 @@ Contributions are welcome! Feel free to **fork the repo** and **submit pull requ
 
 ## 📝 License
 This project is **free to use** and **open-source**. Feel free to modify and enhance it.  
-
----
-
-This README provides a **clean, professional** overview of your project with **clear instructions** and a **live demo link**. Let me know if you need any modifications! 🚀😊
